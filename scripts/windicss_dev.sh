@@ -1,1 +1,1 @@
-windicss './views/**/*.html' -do './views/assets/css/windicss.css'
+windicss './views/**/*.html' -tdo './views/assets/css/windicss.css'

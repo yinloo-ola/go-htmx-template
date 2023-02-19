@@ -1,7 +1,24 @@
 {{define "content"}}
+<div class="flex flex-col">
+    <div style="background-image: url(images/birthday.png)" class="w-full bg-cover flex flex-col items-center">
+        <div
+            class="mt-39 font-extrabold text-3xl text-gray-500 flex justify-center text-center leading-tight w-60 pb-1">
+            Veeka<br> Birthday Party
+        </div>
+        <div class="px-1 py-1 mb-2 border rounded-lg bg-blue-600 bg-opacity-70 text-white w-60 text-xs text-center">
+            Organize/Join Birthday Party. Prizes awaits!
+        </div>
+        <div class="w-9/11 mx-4 border-l border-purple-400 bg-purple-800 rounded-lg flex overflow-x-auto justify-start px-1">
+            <div class="h-21 w-20 min-w-20 my-2 mx-1 rounded-lg bg-gray-300 bg-opacity-40"></div>
+            <div class="h-21 w-20 min-w-20 my-2 mx-1 rounded-lg bg-gray-300 bg-opacity-40"></div>
+            <div class="h-21 w-20 min-w-20 my-2 mx-1 rounded-lg bg-gray-300 bg-opacity-40"></div>
+            <div class="h-21 w-20 min-w-20 my-2 mx-1 rounded-lg bg-gray-300 bg-opacity-40"></div>
+        </div>
+    </div>
+</div>
 <h1 class="p-3 hover:bg-gray-500">This is content!!!!</h1>
 <p>123 + 333 = {{call $.add 123 333}}</p>
-<form hx-post="/createUser" hx-target="#users" hx-swap="afterend">
+<form hx-post="/createUser" hx-target="#users" hx-swap="afterend" hx-confirm="Are you sure you wish to add this user?">
     <input type="text" name="name" id="">
     <input type="text" name="gender" id="">
     <input type="number" name="age" id="">
