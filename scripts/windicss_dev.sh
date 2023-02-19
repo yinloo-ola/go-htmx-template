@@ -1,0 +1,1 @@
+windicss './views/**/*.html' -do './views/web/windicss.css'

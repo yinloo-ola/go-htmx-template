@@ -1,0 +1,1 @@
+windicss './views/**/*.html' -mo './views/web/windicss.css'
