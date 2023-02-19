@@ -1,11 +1,21 @@
 {{define "content"}}
 <h1 class="p-3 hover:bg-gray-500">This is content!!!!</h1>
 <p>123 + 333 = {{call $.add 123 333}}</p>
+<form hx-post="/createUser" hx-target="#users" hx-swap="afterend">
+    <input type="text" name="name" id="">
+    <input type="text" name="gender" id="">
+    <input type="number" name="age" id="">
+    <button type="submit"
+        class="px-2 py-1 border border-green-700 bg-white text-gray-800 hover:font-bold hover:bg-green-700 hover:text-gray-100">
+        More...
+    </button>
+</form>
+
+<div id="users">
+    {{range $user := .users}}
+    {{template "user" $user}}
+    {{end}}
+</div>
 <hr>
 <p><a href="/page">Page render</a></p>
-<button hx-trigger="click" hx-target="#users" hx-get="/users" hx-swap="afterend"
-    class="px-2 py-1 border border-green-700 bg-white text-gray-800 hover:font-bold hover:bg-green-700 hover:text-gray-100">More...</button>
-<div id="users">
-    {{include "users"}}
-</div>
 {{end}}
